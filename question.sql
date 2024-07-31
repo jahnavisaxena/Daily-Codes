@@ -23,3 +23,6 @@ VALUES
 DROP TABLE student;
 
 SELECT * FROM student WHERE city NOT IN("Delhi","Patna");
+
+SELECT * FROM student ORDER BY rollno DESC LIMIT 3;
+SELECT avg(marks) FROM student;
