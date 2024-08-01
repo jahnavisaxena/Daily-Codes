@@ -19,3 +19,6 @@ VALUES
 (5,"biscuits",20,6);
 
 SELECT * FROM ration;
+
+SELECT count(quantity*cost) FROM ration;
+SELECT sum(quantity*cost) FROM ration;
