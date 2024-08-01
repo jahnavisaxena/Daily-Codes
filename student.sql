@@ -1,4 +1,4 @@
-CREATE DATABASE college;
+CREATE DATABASE IF NOT EXISTS college;
 
 USE college;
 
@@ -16,7 +16,19 @@ VALUES
 (101,"Jahnavi",90,"A","Delhi"),
 (102,"Tanay",92,"A","Patna"),
 (103,"Saanvi",90,"A","Delhi"),
-(104,"Tanishk",82,"B","Bhopal");
+(104,"Saanvi",90,"A","Jaipur"),
+(105,"Saanvi",90,"A","Udaipur"),
+(106,"Tanishk",80,"B","Bhopal");
+
+DROP TABLE student;
+
+SELECT * FROM student WHERE city NOT IN("Delhi","Patna");
+
+SELECT * FROM student ORDER BY rollno DESC LIMIT 3;
+SELECT count(marks) FROM student;
+
+SELECT city ,count(name) FROM student GROUP BY city;
+SELECT city ,avg(marks) FROM student GROUP BY city ORDER BY city;
 
 
 SELECT * FROM student WHERE marks >= 90;
